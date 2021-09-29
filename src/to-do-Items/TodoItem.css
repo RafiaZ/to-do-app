@@ -9,4 +9,19 @@
     font-weight: 100;
     font-size: 15px;
     color: #333333;
+    overflow: hidden;
+}
+
+.to-items-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    gap: 0.5rem;
+    color: #333333;
+}
+
+.checkbox{
+    background-color: #e68e37 ;
+    border: 1px solid #cacece;
+    padding: 2rem;
 }

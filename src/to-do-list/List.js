@@ -1,4 +1,5 @@
 import React from "react";
+
 import TodoItem from "../to-do-Items/TodoItem";
 import todosData from "../to-do-Items/todosData";
 
@@ -19,8 +20,9 @@ function List() {
           <h1> To-do List</h1>
         </div>
 
-        <div className="list-contaier" >{todosItems}</div>
-        <div className=""></div>
+        <div className="list-contaier" >{todosItems}
+      </div>
+        
       </div>
     </div>
   );
