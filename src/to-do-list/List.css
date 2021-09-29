@@ -22,9 +22,12 @@
 .list-contaier{
 
     background : #f0bf8e ;
-    padding: 15rem 8rem 15rem 8rem;
+    padding: 4rem 8rem 4rem 8rem;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 8px;
-    
+    display: flex;
+
+    flex-direction: column;
+
 
 }
