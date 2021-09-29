@@ -20,8 +20,21 @@
     color: #333333;
 }
 
-.checkbox{
-    background-color: #e68e37 ;
-    border: 1px solid #cacece;
-    padding: 2rem;
+
+
+input[type=checkbox] {
+    margin-right: 10px;
+    font-size: 5rem;
+    background-color: #e68e37;
+    padding: 1rem;
 }
+
+input[type=checkbox]:focus {
+    outline: 0;
+}
+
+
+
+
+
+  

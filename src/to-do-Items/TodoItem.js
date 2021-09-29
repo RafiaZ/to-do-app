@@ -10,13 +10,24 @@ import "./TodoItem.css";
 
 function TodoItem(props) {
 
-       
+    const [checked, setChecked] = useState(props.item.completed);
+    const [list, setList] = useState(todosData);
+
+    const handleClick = ()=>{
+        setChecked(!checked)
+    }
+
+    const handleRemove= () =>{
+        setList(!list)
+    }
+
+
 
   return (
       <>
  
     <div className="todo-item">
-      <input className="checkbox" type="checkbox"  checked={props.item.completed}  />
+      <input  type="checkbox"  className="item-checkbox" checked={checked} onChange={handleClick} />
       <p>{props.item.text}</p>
 
       </div>
@@ -25,7 +36,7 @@ function TodoItem(props) {
     
     <div className="to-items-icons">
         <FaEdit/>
-        <FaTrash/>
+        <FaTrash onClick={ list && handleRemove}/>
     </div>
       </>
   
