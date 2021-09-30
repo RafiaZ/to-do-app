@@ -1,46 +1,34 @@
-import React, {useState} from "react";
-import {FaEdit} from "react-icons/fa";
-import {FaTrash} from 'react-icons/fa';
+import React, { useState } from "react";
+import { FaEdit } from "react-icons/fa";
+import { FaTrash } from "react-icons/fa";
 
 import todosData from "./todosData";
 
 import "./TodoItem.css";
 
-
-
 function TodoItem(props) {
+  const [checked, setChecked] = useState(props.item.completed);
 
-    const [checked, setChecked] = useState(props.item.completed);
-    const [list, setList] = useState(todosData);
-
-    const handleClick = ()=>{
-        setChecked(!checked)
-    }
-
-    const handleRemove= () =>{
-        setList(!list)
-    }
-
-
-
+  const handleClick = () => {
+    setChecked(!checked);
+  };
   return (
-      <>
- 
-    <div className="todo-item">
-      <input  type="checkbox"  className="item-checkbox" checked={checked} onChange={handleClick} />
-      <p>{props.item.text}</p>
-
+    <>
+      <div className="todo-item">
+        <input
+          type="checkbox"
+          className="item-checkbox"
+          checked={checked}
+          onChange={handleClick}
+        />
+        <p>{props.item.text}</p>
       </div>
 
-      
-    
-    <div className="to-items-icons">
-        <FaEdit/>
-        <FaTrash onClick={ list && handleRemove}/>
-    </div>
-      </>
-  
-
+      <div className="to-items-icons">
+        <FaEdit />
+        <FaTrash />
+      </div>
+    </>
   );
 }
 
