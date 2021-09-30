@@ -4,6 +4,7 @@
     /* opacity: 0.6; */
     height: 100vh;
     background-size: cover;
+    overflow: hidden;
 }
 
 .container-flex{
@@ -11,6 +12,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+   
 
 }
 
@@ -22,19 +24,47 @@
 
 .list-contaier{
 
+    height: 60vh;
     background : #f0bf8e ;
-    padding: 4rem 6rem 4rem 6rem;
+    padding: 3rem 6rem 3rem 6rem;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+   
+
+    
 }
+
+.list-contaier::-webkit-scrollbar {
+    width: 9px;
+  }
+
+  .list-contaier::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 5px;
+  }
+   
+  /* Handle */
+  .list-contaier::-webkit-scrollbar-thumb {
+    background: #d4995e; 
+    border-radius: 10px;
+  }
+
+  .list-contaier::-webkit-scrollbar-thumb:hover {
+    background: #a17242; 
+  }
+  
+
 
 .input-container{
     display: flex;
     justify-content: center;
     align-items: flex-end;
     gap: 0.5rem;
+
 }
 
 .list-input{
@@ -52,11 +82,12 @@
 
 .add-list-button{
     border: 1px solid #f1a559 ;
-    padding: 0.5rem;
+   height: 50px;
+   width: 50px;
     border-radius: 50%;
     background-color:#f8a24c ;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-top: 10px;
 
 }

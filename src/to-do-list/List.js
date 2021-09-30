@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { FaTasks } from 'react-icons/fa';
+import React, { useState } from "react";
+import { FaTasks } from "react-icons/fa";
 import TodoItem from "../to-do-Items/TodoItem";
 import todosData from "../to-do-Items/todosData";
 
@@ -24,36 +24,33 @@ function List() {
 
   return (
     <div className="container">
-
       <div className="container-flex">
-
         <div className="heading">
           <h1> To-do List</h1>
         </div>
 
-
         <div className="list-contaier">
-        <div className="view-list">
-         <FaTasks/>
-       </div>
-          {printList}
+          <div className="view-list">
+            <FaTasks size={25}/>
           </div>
-
-    </div>
-        <div className="input-container">
-        <input
-       className="list-input"
-        type="text"
-        onChange={(e) => {
-          setTextdata(e.target.value);
-        }}
-      />
-      <button className="add-list-button" onClick={() => handleAddListItem()}> + </button>
-        
+          {printList}
+        </div>
       </div>
-          </div>    
 
-
+      <div className="input-container">
+        <input
+          className="list-input"
+          type="text"
+          onChange={(e) => {
+            setTextdata(e.target.value);
+          }}
+        />
+        <button className="add-list-button" onClick={() => handleAddListItem()}>
+          {" "}
+          +{" "}
+        </button>
+      </div>
+    </div>
   );
 }
 

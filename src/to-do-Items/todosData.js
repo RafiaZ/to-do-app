@@ -13,7 +13,18 @@ const todosData = [
         id: 3,
         text: "Give bath to Kitty",
         completed: true
+    },
+    {
+        id: 4,
+        text: "Give bath to Kitty",
+        completed: true
+    },
+    {
+        id: 5,
+        text: "Give bath to Kitty",
+        completed: true
     }
+    
 ]
 
 export default todosData
